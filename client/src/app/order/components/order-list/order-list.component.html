@@ -1,0 +1,52 @@
+<h3>Order List</h3>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="orders">
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Products</th>
+          <th>Total Cost</th>
+          <th>Total Tax</th>
+          <th>Date</th>
+      </tr>
+    </thead>
+  <tbody>
+      <tr *ngFor="let order of orders">
+        <td>
+          {{ order.user.name.first }}<br/>
+          {{ order.user.name.middle }}<br/>
+          {{ order.user.name.last }}
+        </td>
+        <td>
+          {{ order.user.address.street1 }}<br/>
+          {{ order.user.address.street2 }}<br/>
+          {{ order.user.address.city }}<br/>
+          {{ order.user.address.state }}<br/>
+          {{ order.user.address.zip }}<br/>
+          {{ order.user.email }}<br/>
+          {{ order.user.phone }}
+        </td>
+        <td>
+          <table>
+            <tbody>
+              <tr *ngFor="let po of order.orderList">
+                <td>{{ po.product.name }}</td>
+                <td>{{ po.product.description }}</td>
+                <td>{{ po.quantity }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td>
+         {{ order.totalCost | currency: 'USD' }}
+        </td>
+        <td>
+          {{ order.totalTax | currency: 'USD' }}
+        </td>
+        <td>
+          {{ order.date }}
+        </td>
+       </tr>
+    </tbody>
+</table>
+<h3 class="text-danger" *ngIf="error">{{error}}</h3>

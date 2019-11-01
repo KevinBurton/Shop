@@ -1,0 +1,45 @@
+  {
+    "name": {
+      "first": "John",
+      "middle": "Jay",
+      "last": "Dent"
+    },
+    "address": {
+      "street1": "1 Easy Street",
+      "city": "Los Angeles",
+      "state": "California",
+      "zip": "12345"
+    },
+    "email": "john@nocantack.com",
+    "phone": "123 456-7890"
+  }
+  {
+    "name": {
+      "first": "Harry",
+      "middle": "Met",
+      "last": "David"
+    },
+    "address": {
+      "street1": "46 Wall Street",
+      "city": "New York City",
+      "state": "New York",
+      "zip": "67890"
+    },
+    "email": "harry@nocantack.com",
+    "phone": "123 456-7890"
+  }
+  {
+    "name": {
+      "first": "Mary",
+      "middle": "Sue",
+      "last": "Hipple"
+    },
+    "address": {
+      "street1": "2 Sheeps Lane",
+      "city": "Baton Rouge",
+      "state": "Louisianna",
+      "zip": "67890"
+    },
+    "email": "mary@nocantack.com",
+    "phone": "123 456-7890"
+  }

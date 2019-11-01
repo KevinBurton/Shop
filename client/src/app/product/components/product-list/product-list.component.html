@@ -1,0 +1,22 @@
+<h3>Product List</h3>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="products">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Image</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <td>{{ product.name }}</td>
+    <td>{{ product.description }}</td>
+    <td>{{ product.price.base | currency:'USD' }}</td>
+    <td><img src='./assets/{{product.image}}' height="50" width="50"/></td>
+    <td><button (click)='addToCartNotification(product)' *ngIf="currentUser">Add</button></td>
+  </tr>
+  </tbody>
+</table>
+<h3 class="text-danger" *ngIf="error">{{error}}</h3>

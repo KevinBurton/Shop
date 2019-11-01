@@ -1,0 +1,108 @@
+  {
+    "name": "Skittles",
+    "type": ["candy"],
+    "description": "16lb bag of Skittles",
+    "price": {
+      "base": 16.00,
+      "tax": 0.00,
+      "duty": 0.00
+    },
+    "related": ["Starburst"],
+    "image": "https://images.app.goo.gl/BFnu5aLsZyPKW8Rx9"
+  }
+  {
+    "name": "Walkman",
+    "type": ["electronics"],
+    "description": "Sony Walkman",
+    "price": {
+      "base": 99.99,
+      "tax": 0.10,
+      "duty": 0.00
+    },
+    "related": ["Radio"],
+    "image": "https://images.app.goo.gl/9pusLEHUHdxpEgA97"
+  }
+  {
+    "name": "Popcorn",
+    "type": ["snack"],
+    "description": "bag of microwave popcorn",
+    "price": {
+      "base": 0.99,
+      "tax": 0.00,
+      "duty": 0.00
+    },
+    "related": ["chips"],
+    "image": "https://images.app.goo.gl/stXjxXgJiP1xn6Pd9"
+  }
+  {
+    "name": "Coffee",
+    "type": ["beverage"],
+    "description": "imported bag of Vanilla-Hazelnut Coffee",
+    "price": {
+      "base": 11.00,
+      "tax": 0.00,
+      "duty": 0.05
+    },
+    "related": ["Kombucha"],
+    "image": "https://images.app.goo.gl/S6DNY56CoKd32raQ7"
+  }
+  {
+    "name": "Vespa",
+    "type": ["motorcycle"],
+    "description": "imported Vespa",
+    "price": {
+      "base": 15001.25,
+      "tax": 0.10,
+      "duty": 0.05
+    },
+    "related": ["Harley-Davidson"],
+    "image": "https://images.app.goo.gl/P1PSyPYzi8j9Zw2a8"
+  }
+  {
+    "name": "Snickers",
+    "type": ["candy"],
+    "description": "imported crate of almond snickers",
+    "price": {
+      "base": 75.99,
+      "tax": 0.00,
+      "duty": 0.05
+    },
+    "related": ["chocolate"],
+    "image": "https://images.app.goo.gl/UUdUU8QYKAuu7qJ17"
+  }
+  {
+    "name": "Discman",
+    "type": ["electronics"],
+    "description": "Discman",
+    "price": {
+      "base": 55.00,
+      "tax": 0.10,
+      "duty": 0.00
+    },
+    "related": ["Walkman"],
+    "image": "https://images.app.goo.gl/6hPGzQ6vy6AEUGZi7"
+  }
+  {
+    "name": "Wine",
+    "type": ["beverage"],
+    "description": "imported bottle of wine",
+    "price": {
+      "base": 10.00,
+      "tax": 0.10,
+      "duty": 0.05
+    },
+    "related": ["Coffee"],
+    "image": "https://images.app.goo.gl/utnx48wKZN7Kc4WT6"
+  }
+  {
+    "name": "Fair-Trade Coffee",
+    "type": ["beverage"],
+    "description": "300# bag of fair-trade coffee",
+    "price": {
+      "base": 997.99,
+      "tax": 0.00,
+      "duty": 0.00
+    },
+    "related": ["Coffee"],
+    "image": "https://images.app.goo.gl/NdP9zVEio7R4oE977"
+  }

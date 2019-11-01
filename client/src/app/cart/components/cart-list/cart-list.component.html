@@ -1,0 +1,36 @@
+<h3>Cart List</h3>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="cartList && cartList.length > 0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+      <th>Tax</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cart of cartList">
+      <td>{{ cart.product.name }}</td>
+      <td>{{ cart.product.description }}</td>
+      <td><img src='./assets/{{cart.product.image}}' height="50" width="50"/></td>
+      <td>{{ cart.product.price.base | currency:'USD' }}</td>
+      <td>{{ cart.quantity }}</td>
+      <td>{{ (cart.product.price.base * cart.quantity) | currency:'USD' }}</td>
+      <td>{{ (cart.product.price.base * cart.quantity) | tax:cart.product.price.tax:cart.product.price.duty | currency:'USD' }}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>{{ totalCost | currency:'USD' }}</td>
+      <td>{{ totalTax | currency:'USD' }}</td>
+    </tr>
+  </tbody>
+</table>
+<button type="button" class="btn btn-primary" (click)="placeOrderNotification()">Order</button>
+<div *ngIf="errorMessage && errorMessage.length > 0">{{errorMessage}}</div>

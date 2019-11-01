@@ -1,0 +1,44 @@
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="product">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ product.name }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.price.base | currency:'USD' }}</td>
+      <td><img src='./assets/{{product.image}}' height="50" width="50"/></td>
+    </tr>
+  </tbody>
+</table>
+<form novalidate
+      (ngSubmit)="onSubmit()"
+      [formGroup]="productCartForm">
+  <div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label"
+           for="quantityId">Quantity</label>
+    <div class="col-md-8">
+      <input class="form-control"
+           id="quantityId"
+           type="number"
+           formControlName="quantity"
+           aria-describedby="quantityHelp"
+           [ngClass]="{'is-invalid': (productCartForm.get('quantity').touched || productCartForm.get('quantity').dirty) && !productCartForm.get('quantity').valid }"/>
+      <small id="quantityHelp" class="form-text text-muted">Enter the number of the above items you wish to purchase and then 'Add to cart'.</small>
+      <span class="invalid-feedback">
+        <span *ngIf="productCartForm.get('quantity').errors?.required">
+        Please enter a valid quatity
+        </span>
+        <span *ngIf="productCartForm.get('quantity').errors?.min">
+        The quantity must be greater than 0.
+        </span>
+      </span>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Add to cart</button>
+</form>

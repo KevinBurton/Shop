@@ -1,0 +1,7 @@
+<div>
+  <app-cart-list
+    [cartList]="cartList$ | async"
+    [currentUser]="currentUser$ | async"
+    (placeOrder)="placeOrder($event)">
+  </app-cart-list>
+</div>

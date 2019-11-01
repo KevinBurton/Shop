@@ -1,0 +1,8 @@
+<div>
+  <app-product-list
+    [products]="products$ | async"
+    [currentUser]="currentUser$ | async"
+    [error]="error$ | async"
+    (addToCart)="addToCart($event)">
+  </app-product-list>
+</div>
