@@ -10,6 +10,7 @@ import { Cart } from 'src/app/models/cart';
 export class NavMenuDisplayComponent {
 
   @Input() cartList: Cart;
+  @Input() error: string;
   @Input() currentUser: User;
   @Output() logout = new EventEmitter();
   isExpanded = true;

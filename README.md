@@ -1,4 +1,4 @@
-# Shop
+ng server# Shop
 Angular shopping cart application
 
 There are two main folders to this application. To run the application locally it will take two terminal windows to run. One terminal window should be in the 'backend' folder. The other terminal window should be in the 'client' folder. To start the backend go to the 'backend' terminal window and type 'node server.js'. This will start the backend process listening for requests. 
