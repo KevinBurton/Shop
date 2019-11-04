@@ -1,11 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { Cart } from 'src/app/models/cart';
 
 @Component({
   selector: 'app-nav-menu-display',
   templateUrl: './nav-menu-display.component.html',
-  styleUrls: ['./nav-menu-display.component.css']
+  styleUrls: ['./nav-menu-display.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavMenuDisplayComponent {
 
