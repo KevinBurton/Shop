@@ -25,7 +25,7 @@ export class NavMenuDisplayComponent {
   }
 
   get cartCount(): number {
-    return this.cartList.length;
+    return this.cartList ? this.cartList.length : 0;
   }
   get isAdmin(): boolean {
     return this.currentUser ? this.currentUser.isAdmin : false;
