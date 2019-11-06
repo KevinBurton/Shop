@@ -89,7 +89,7 @@ describe('UserListComponent', () => {
     const tableCells = fixture.nativeElement.querySelectorAll('table tbody tr td');
     expect(tableCells.length).toEqual(15);
   });
-  it('pass users (cell)', () => {
+  it('pass users (filter)', () => {
     fixture.detectChanges();
     const tableCells = [...fixture.nativeElement.querySelectorAll('table tbody tr td')];
     const filteredCells = tableCells.filter((c, i) => i % 5 === 0);
